@@ -17,7 +17,6 @@ for p in Path( '.' ).rglob( '*' ):
         except:
             pass
 
-
 counter = 1
 while len(flag) < len(sanitized):
     for part in sanitized: 
@@ -25,13 +24,7 @@ while len(flag) < len(sanitized):
             print(f'[+] Value for position {counter}: {part[0]}')
             flag.append(part[0])
             counter += 1
-        else:
-            pass
 
 print('\n[+] Encoded Flag: ', ''.join(flag))
 
-print('\n[+] Decoded Flag: ', str(base64.b64decode(''.join(flag)), "utf-8"))
-
-
-
-
+print('\n[+] Decoded Flag: ', str(base64.b64decode(''.join(flag)), "utf-8")) 
